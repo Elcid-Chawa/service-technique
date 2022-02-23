@@ -23,7 +23,7 @@ class Menu extends Component {
                             <Nav.Link  eventKey="link-1"><NavLink to="/dashboard">Dashboard</NavLink></Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            {authedUser && <Nav.Link  eventKey="link-2"><NavLink to="/add">New Product</NavLink></Nav.Link>}
+                            {authedUser==='admin' && <Nav.Link  eventKey="link-2"><NavLink to="/add">New Product</NavLink></Nav.Link>}
                         </Nav.Item>
                         <Nav.Item onClick={this.handleClick}>
                             { authedUser !== ( null || undefined) && <Nav.Link  eventKey="link-3"> <NavLink to='/login'>Logout</NavLink></Nav.Link>}
