@@ -26,6 +26,26 @@ let products = {
     }
 }
 
+let base = {
+    mowb: {
+        id: "mowb",
+        services: []
+    }
+}
+
+let service = {
+    "serviceid": {
+        id: "Serviceid",
+        type: "Liverasion",
+        requestDate: 1489579767190,
+        status: "pending"
+    }
+}
+
+let mission = {
+    
+}
+
 function generateUID () {
     return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
   }

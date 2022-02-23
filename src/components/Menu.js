@@ -15,19 +15,30 @@ class Menu extends Component {
     render(){
         const { user, authedUser} = this.props;
         return(
-            <Navbar bg="dark">
-                <Container>
+            <Navbar bg="dark" variant="light" className="text-white">
+                <Container >
                     <Navbar.Brand>Logo</Navbar.Brand>
                     <Nav className="me-auto" activeKey="/dashboard">
-                        <Nav.Item>
-                            <Nav.Link  eventKey="link-1"><NavLink to="/dashboard">Dashboard</NavLink></Nav.Link>
+                        <Nav.Item style={{color: "white"}}>
+                            <Nav.Link href="/">Accueil</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item style={{color: "white"}}>
+                            <Nav.Link href="/">Contact</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item style={{color: "white"}}>
+                            <Nav.Link  eventKey="link-1" href="/dashboard">Dashboard</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            {authedUser==='admin' && <Nav.Link  eventKey="link-2"><NavLink to="/add">New Product</NavLink></Nav.Link>}
+                            {authedUser==='admin' && <Nav.Link  eventKey="link-2" href="/add">New Product</Nav.Link>}
                         </Nav.Item>
-                        <Nav.Item onClick={this.handleClick}>
-                            { authedUser !== ( null || undefined) && <Nav.Link  eventKey="link-3"> <NavLink to='/login'>Logout</NavLink></Nav.Link>}
-                        </Nav.Item>
+                        { (authedUser !==  null)                        
+                            ? (<Nav.Item onClick={this.handleClick}>
+                                    <Nav.Link  eventKey="link-3" ><NavLink  to='/login'>Logout</NavLink></Nav.Link>
+                                </Nav.Item> )
+                            : (<Nav.Item><Nav.Link>
+                                <NavLink  to='/login'>Login</NavLink>
+                            </Nav.Link></Nav.Item> )
+                        }
                     </Nav>
                 </Container>
             </Navbar>

@@ -1,14 +1,15 @@
-import React, { Component, useEffect, useState } from 'react';
+import React from 'react';
 import { Table } from 'react-bootstrap';
 import { connect } from 'react-redux';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 
 
 function Dashboard (props) {
+    const location = useLocation();
 
     if(props.authedUser === null || undefined){
         
-        return <Navigate to="/login" />
+        return <Navigate to="/login" state={{from: location}} replace />
     }
 
      function mapProducts() {

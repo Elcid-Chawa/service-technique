@@ -13,11 +13,13 @@ const withRouters = (Component) => {
     return Wrapper;
 }
 
+
 class Login extends Component {
     state = {
         authedUser: undefined,
         loggedIn: false,
-        username: ''
+        username: '',
+        history: ''
     }
 
     handleSubmit = (e) => {
@@ -43,18 +45,28 @@ class Login extends Component {
 
     render(){
 
-       const {loggedIn} = this.state;
+       const {loggedIn, history} = this.state;
        const {isLoggedIn} = this.props;
+
+       if(loggedIn){
+           <Navigate to={"/"} />
+       }
 
         
         return(
-            <Container className='position-absolute top-50 start-50 translate-middle border border-2 rounded border-primary'>
-                <Row className='justify-content-md-center'><h3>Login</h3></Row>
-                <Row className='justify-content-center aling-items-center'>
-                   <Form onSubmit={this.handleSubmit} className="form-outline mb-4" >
+            <Container
+                id='main-container' 
+                className='d-grid h-100'
+                            
+                            >
+                   <Form onSubmit={this.handleSubmit} 
+                    id='sign-in-form'
+                    className="form-outline mb-4 text-center" >
                         {loggedIn &&
                             <Navigate to="/dashboard" replace={true} />
                         }
+                        <h3>Login</h3>
+                        
                         <Form.Group className="form-outline mb-3">
                             <Form.Label>Username: </Form.Label>
                             <Form.Control type="text" name='username' placeholder='username' value={this.state.username} onChange={this.handleChange} />
@@ -69,8 +81,6 @@ class Login extends Component {
                         <Button type='submit' className='btn btn-primary btn-block mb-4'>Login</Button>
                         
                     </Form> 
-                </Row>
-                
             </Container>
             
         )
