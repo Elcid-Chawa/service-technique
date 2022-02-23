@@ -31,17 +31,6 @@ th, td {
   text-align: center;
 }
 
-.form-wrap {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-from {
-  display: table;
-  align-items: center;
-}
-
 .table-div {
   display: flex;
   justify-content: center;

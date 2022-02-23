@@ -1,8 +1,9 @@
 import React, {Component} from "react";
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { unsetAuthedUser } from "../actions/authUser";
 import { handleLogout } from "../actions/login";
+import { Container, Nav, Navbar } from "react-bootstrap";
 
 class Menu extends Component {
 
@@ -14,13 +15,24 @@ class Menu extends Component {
     render(){
         const { user, authedUser} = this.props;
         return(
-            <div >
-                <ul>
-                    <li><NavLink to="/">Dashboard</NavLink></li>
-                    {authedUser === 'admin' && <li><NavLink to="/add">New Product</NavLink></li>}
-                    { authedUser !== ( null || undefined) && <li onClick={this.handleClick}><NavLink to='/login' > Logout</NavLink></li>}
-                </ul>
-            </div>
+            <Navbar bg="dark">
+                <Container>
+                    <Navbar.Brand>Logo</Navbar.Brand>
+                    <Nav className="me-auto" activeKey="/dashboard">
+                        <Nav.Item>
+                            <Nav.Link  eventKey="link-1"><NavLink to="/dashboard">Dashboard</NavLink></Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            {authedUser && <Nav.Link  eventKey="link-2"><NavLink to="/add">New Product</NavLink></Nav.Link>}
+                        </Nav.Item>
+                        <Nav.Item onClick={this.handleClick}>
+                            { authedUser !== ( null || undefined) && <Nav.Link  eventKey="link-3"> <NavLink to='/login'>Logout</NavLink></Nav.Link>}
+                        </Nav.Item>
+                    </Nav>
+                </Container>
+            </Navbar>
+            
+            
         )
     }
 }

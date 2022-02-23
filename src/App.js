@@ -9,6 +9,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import NewProduct from './components/NewProduct';
 import Dashboard from './components/Dashboard';
 import Menu from './components/Menu';
+import { Container } from 'react-bootstrap';
 
 class App extends Component {
   componentDidMount(){
@@ -21,20 +22,20 @@ class App extends Component {
       return (
         <BrowserRouter>
           <Fragment>
-            <div className="App">
+            <Container className='justify-content-center'>
               { !isAuthenticated ? <Login />
-                : <div>
-                    <header className='App-header'>
+                : <Container>
+                    <header>
                     <Menu />
                     </header>
                     <Routes>
-                      <Route exact path='/' element={<Dashboard />} />
+                      <Route exact path='/dashboard' element={<Dashboard {...this.props}/>} />
                       <Route path ='/add' exact element={<NewProduct />} />
                       <Route path='/login' component={<Login />} />
                     </Routes>
-                  </div>
+                  </Container>
               }
-            </div>   
+            </Container>   
           </Fragment>
         </BrowserRouter>
       

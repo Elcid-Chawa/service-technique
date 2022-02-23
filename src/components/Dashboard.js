@@ -1,44 +1,53 @@
-import React, {Component } from 'react';
+import React, { Component, useEffect, useState } from 'react';
+import { Table } from 'react-bootstrap';
 import { connect } from 'react-redux';
+import { Navigate } from 'react-router-dom';
 
 
-class Dashboard extends Component {
-render(){
+function Dashboard (props) {
 
-    const { products, allProducts, authedUser } = this.props;
-    console.log(allProducts)
+    if(props.authedUser === null || undefined){
+        
+        return <Navigate to="/login" />
+    }
+
+     function mapProducts() {
+        
+        return(
+               props.allProducts.map((id) => (
+                        <tr key={id}>
+                            <td>{props.products[id].id}</td>
+                            <td>{props.products[id].name}</td>
+                            <td>{props.products[id].qty}</td>
+                            <td>{props.products[id].createDate}</td>
+                            {props.authedUser === 'admin' && <td><button>Edit</button> <button>Delete</button></td>}
+                        </tr>
+                    )
+                )
+        )
+    }
+
     return (
         <div >
             <h1>Product Dashboard:</h1>
-            <div className='table-div'>
-                <table>
+            
+                <Table className='stripped bordered hover'>
                     <thead>
                         <tr>
                             <th>Code: </th>
                             <th>Name:</th>
                             <th>Quantity: </th>
                             <th>Create Date:</th>
-                            {authedUser === 'admin' && <th>Modify</th>}
+                            {props.authedUser === 'admin' && <th>Modify</th>}
                         </tr>
                     </thead>
                     <tbody>
-                        {   allProducts.map((id) => (
-                                <tr key={id}>
-                                    <td>{products[id].id}</td>
-                                    <td>{products[id].name}</td>
-                                    <td>{products[id].qty}</td>
-                                    <td>{products[id].createDate}</td>
-                                    {authedUser === 'admin' && <td><button>Edit</button> <button>Delete</button></td>}
-                                </tr>
-                            )
-                        )}
+                        { mapProducts()}
                     </tbody>
-                </table>
+                </Table>
             </div>
                 
-        </div>
     )
-}
 }
 
 function mapStateToProps({users, products, authedUser}){
