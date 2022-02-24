@@ -13,30 +13,30 @@ class Menu extends Component {
         this.props.dispatch(handleLogout(this.props.authedUser));
     }
     render(){
-        const { user, authedUser} = this.props;
+        const { authedUser} = this.props;
         return(
-            <Navbar bg="dark" variant="light" className="text-white">
+            <Navbar bg="dark" variant="dark">
                 <Container >
                     <Navbar.Brand>Logo</Navbar.Brand>
-                    <Nav className="me-auto" activeKey="/dashboard">
+                    <Nav className="justify-content-center" activeKey="/dashboard">
                         <Nav.Item style={{color: "white"}}>
-                            <Nav.Link href="/">Accueil</Nav.Link>
+                            <Nav.Link className="text-white" to="/"  as={NavLink}>Accueil</Nav.Link>
                         </Nav.Item>
                         <Nav.Item style={{color: "white"}}>
-                            <Nav.Link href="/">Contact</Nav.Link>
+                            <Nav.Link to="/" className="text-white"  as={NavLink}>Contact</Nav.Link>
                         </Nav.Item>
                         <Nav.Item style={{color: "white"}}>
-                            <Nav.Link  eventKey="link-1" href="/dashboard">Dashboard</Nav.Link>
+                            <Nav.Link className="text-white" eventKey="link-1"  as={NavLink} to="/dashboard">Dashboard</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            {authedUser==='admin' && <Nav.Link  eventKey="link-2" href="/add">New Product</Nav.Link>}
+                            {authedUser === 'root' && <Nav.Link className="text-white" eventKey="link-2"  as={NavLink} to="/add">New Product</Nav.Link>}
                         </Nav.Item>
                         { (authedUser !==  null)                        
                             ? (<Nav.Item onClick={this.handleClick}>
-                                    <Nav.Link  eventKey="link-3" ><NavLink  to='/login'>Logout</NavLink></Nav.Link>
+                                    <Nav.Link className="text-white" as={NavLink} eventKey="link-3" to='/login'>Logout</Nav.Link>
                                 </Nav.Item> )
-                            : (<Nav.Item><Nav.Link>
-                                <NavLink  to='/login'>Login</NavLink>
+                            : (<Nav.Item><Nav.Link className="text-white" as={NavLink} to='/login' >
+                                Login
                             </Nav.Link></Nav.Item> )
                         }
                     </Nav>
@@ -49,10 +49,9 @@ class Menu extends Component {
 }
 
 function mapStateToProps({users, authedUser, login}){
-    const user = users[authedUser]
+
     return {
         authedUser,
-        user: user,
         login,
         
     }
