@@ -65,20 +65,20 @@ class Login extends Component {
                         {loggedIn &&
                             <Navigate to="/dashboard" replace={true} />
                         }
-                        <h3>Login</h3>
+                        <h3>Connexion</h3>
                         
                         <Form.Group className="form-outline mb-3">
-                            <Form.Label>Username: </Form.Label>
+                            <Form.Label>Nom d'utilisateur: </Form.Label>
                             <Form.Control type="text" name='username' placeholder='username' value={this.state.username} onChange={this.handleChange} />
-                            <Form.Text className='test-muted'> Enter username to login</Form.Text>
+                            <Form.Text className='test-muted'> Entrez le Nom d'utilisateur</Form.Text>
                         </Form.Group> 
                         <Form.Group className="form-outline mb-3" controlId="formGroupPassword">
-                            <Form.Label>Password: </Form.Label>
+                            <Form.Label>Mot de passe: </Form.Label>
                             <Form.Control type="password" placeholder='enter pasword' />
-                            <Form.Text className='test-muted'>Enter password</Form.Text>
+                            <Form.Text className='test-muted'>Entrez le mot de passe</Form.Text>
                         </Form.Group>    
                             
-                        <Button type='submit' className='btn btn-primary btn-block mb-4'>Login</Button>
+                        <Button type='submit' className='btn btn-primary btn-block mb-4'>Connexion</Button>
                         
                     </Form> 
             </Container>

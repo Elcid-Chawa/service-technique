@@ -1,14 +1,19 @@
 import React from "react";
-import { Container, Row, Col, Carousel, Card } from "react-bootstrap";
+import { 
+    Container, 
+    Row, 
+    Col, 
+    Carousel, 
+    Card 
+    } from "react-bootstrap";
 
 export default function Main(){
     return(
         <Container>
             <Row>
                 <Container
-                className="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
-                style={{backgroundImage: `url('https://mdbcdn.b-cdn.net/img/new/fluid/nature/015.webp')`, 
-                }} >
+                className="bg-image p-5 mb-1 mt-1 text-center shadow-1-strong rounded "
+                 >
                     <Row >
                         <Col style={{text:"white"}}>Service Technique</Col>
                         <Col>image</Col>
@@ -25,44 +30,44 @@ export default function Main(){
                         <Col></Col>
                     </Row>
                     This is the main page
+                    <Row>
+
+                    </Row>
                 </Container> 
             </Row>
-            <Row>
-                <Container>
-                    <Carousel>
-                        <Carousel.Item>
-                            <img 
-                                className="d-block w-100"
-                                alt="First Slide"
-                            />
-                            <Carousel.Caption>
-                                <h3>Service Maintenance</h3>
-                                <p>We take care of maintenance services</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img 
-                                className="d-block w-100"
-                                alt="Second Slide"
-                            />
-                            <Carousel.Caption>
-                                <h3>Service Mission</h3>
-                                <p></p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img 
-                                className="d-block w-100"
-                                alt="3rd Slide"
-                            />
-                            <Carousel.Caption>
-                                <h3>Service Interventions</h3>
-                                <p>Sur tout kes appareils electric, chanbre froid, fous...</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                    </Carousel>
-                </Container> 
-            </Row>
+
+                <Carousel>
+                    <Carousel.Item>
+                        <img 
+                            className="d-block w-100 h-50"
+                            src="https://cdn.pixabay.com/photo/2022/02/08/09/03/window-7001026_960_720.jpg"
+                            alt=" Test image" />
+                        <Carousel.Caption>
+                            <h1>Service</h1>
+                            <p>A lot of services</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img 
+                            className="d-block w-100 h-50"
+                            src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_960_720.jpg"
+                            alt=" Test image" />
+                        <Carousel.Caption>
+                            <h1>Service3</h1>
+                            <p>A lot of services</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100 h-50" 
+                            src="https://cdn.pixabay.com/photo/2013/07/18/20/26/sea-164989_960_720.jpg"
+                            alt=" Test image" />
+                        <Carousel.Caption>
+                            <h1>Service2</h1>
+                            <p>A lot of services</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
             
             <Row>
                 <Col>
@@ -107,7 +112,7 @@ export default function Main(){
                 <Card className="text-center">
                         <Card.Header className="bg-image hover-overlay ripple">
                             <img 
-                                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+                                src="https://cdn.pixabay.com/photo/2013/07/18/20/26/sea-164989_960_720.jpg"
                                 className="img-fluid"
                             />
                             <div 

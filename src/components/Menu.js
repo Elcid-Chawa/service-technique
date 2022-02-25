@@ -29,14 +29,14 @@ class Menu extends Component {
                             <Nav.Link className="text-white" eventKey="link-1"  as={NavLink} to="/dashboard">Dashboard</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            {authedUser === 'root' && <Nav.Link className="text-white" eventKey="link-2"  as={NavLink} to="/add">New Product</Nav.Link>}
+                            {authedUser === 'root' && <Nav.Link className="text-white" eventKey="link-2"  as={NavLink} to="/add">Service</Nav.Link>}
                         </Nav.Item>
                         { (authedUser !==  null)                        
                             ? (<Nav.Item onClick={this.handleClick}>
-                                    <Nav.Link className="text-white" as={NavLink} eventKey="link-3" to='/login'>Logout</Nav.Link>
+                                    <Nav.Link className="text-white" as={NavLink} eventKey="link-3" to='/login'>Déconnexion</Nav.Link>
                                 </Nav.Item> )
                             : (<Nav.Item><Nav.Link className="text-white" as={NavLink} to='/login' >
-                                Login
+                                Connexion
                             </Nav.Link></Nav.Item> )
                         }
                     </Nav>

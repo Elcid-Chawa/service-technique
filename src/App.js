@@ -9,8 +9,8 @@ import ProtectedRoute from './components/ProtectedRoute';
 import NewProduct from './components/NewProduct';
 import Dashboard from './components/Dashboard';
 import Menu from './components/Menu';
-import Main from './components/Main'
-import { Container } from 'react-bootstrap';
+import Main from './components/Main';
+import Header from './components/Header';
 
 class App extends Component {
   componentDidMount(){
@@ -23,15 +23,14 @@ class App extends Component {
       return (
         <BrowserRouter>
           <Fragment>
-            <Container>
-              <Menu />
-              <Routes>
-                <Route exact path ='/' element={<Main />} />
-                <Route exact path='/dashboard' element={<Dashboard {...this.props}/>} />
-                <Route path ='/add' exact element={<NewProduct />} />
-                <Route exact path='/login' element={<Login />} />
-              </Routes>
-            </Container>   
+            <Menu />
+            <Header />           
+            <Routes>
+              <Route exact path ='/' element={<Main />} />
+              <Route exact path='/dashboard' element={<Dashboard {...this.props}/>} />
+              <Route path ='/add' exact element={<NewProduct />} />
+              <Route exact path='/login' element={<Login />} />
+            </Routes> 
           </Fragment>
         </BrowserRouter>
       
