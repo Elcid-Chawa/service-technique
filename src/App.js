@@ -11,6 +11,7 @@ import Dashboard from './components/Dashboard';
 import Menu from './components/Menu';
 import Main from './components/Main';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 class App extends Component {
   componentDidMount(){
@@ -22,7 +23,8 @@ class App extends Component {
     const isAuthenticated = login !== null ? login.isLoggedin : false
       return (
         <BrowserRouter>
-          <Fragment>
+          <Fragment>'
+            <>
             <Menu />
             <Header />           
             <Routes>
@@ -30,7 +32,9 @@ class App extends Component {
               <Route exact path='/dashboard' element={<Dashboard {...this.props}/>} />
               <Route path ='/add' exact element={<NewProduct />} />
               <Route exact path='/login' element={<Login />} />
-            </Routes> 
+            </Routes>
+            <Footer />
+            </> 
           </Fragment>
         </BrowserRouter>
       
