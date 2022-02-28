@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, NavLink } from "react-bootstrap";
 
 export default function Footer(){
     return(
@@ -29,20 +29,21 @@ export default function Footer(){
                     <Col className="col-6 col-lg-2 mb-3 text-white">
                         <h5>Services</h5>
                         <ul className="list-unstyled text-muted">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li>Gèrer les installations</li>
+                            <li>Service Maintenance</li>
+                            <li>Service D'Achats</li>
+                            <li>Service D'Administration</li>
+                            <li>Service D'Interventions</li>
+                            <li>Mission</li>
+                            <li>Personnels</li>
                         </ul>
                     </Col>
                     <Col className="col-6 col-lg-2 mb-3 text-white">
                         <h5>Contact</h5>
                         <ul className="list-unstyled text-muted">
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li>Limbe, Cameroun</li>
+                            <li>+ 237 652 121 137</li>
+                            <li>contact@example.com</li>
                             <li></li>
                             <li></li>
                             <li></li>

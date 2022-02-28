@@ -12,6 +12,7 @@ import Menu from './components/Menu';
 import Main from './components/Main';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
 
 class App extends Component {
   componentDidMount(){
@@ -32,6 +33,7 @@ class App extends Component {
               <Route exact path='/dashboard' element={<Dashboard {...this.props}/>} />
               <Route path ='/add' exact element={<NewProduct />} />
               <Route exact path='/login' element={<Login />} />
+              <Route exact path='/contact' element={<Contact />} />
             </Routes>
             <Footer />
             </> 

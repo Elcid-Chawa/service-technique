@@ -87,7 +87,7 @@ export default function Main(){
                         src={require('../assets/img/home_page.jpeg')}
                         alt="window" />
                     <Carousel.Caption>
-                            <h1>Personnel</h1>
+                            <h1>Personnels</h1>
                             <p>A lot of services</p>
                     </Carousel.Caption>
                 </Carousel.Item>
