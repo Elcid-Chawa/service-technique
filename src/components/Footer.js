@@ -15,17 +15,7 @@ export default function Footer(){
                         </ul>
 
                     </Col>
-                    <Col className="col-6 col-lg-2 mb-3 text-white">
-                        <h5>Links</h5>
-                        <ul className="list-unstyled text-muted">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </Col>
+
                     <Col className="col-6 col-lg-2 mb-3 text-white">
                         <h5>Services</h5>
                         <ul className="list-unstyled text-muted">
