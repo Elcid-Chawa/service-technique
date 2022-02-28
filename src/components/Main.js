@@ -12,36 +12,86 @@ export default function Main(){
         <>
         <Container className='bg-image mt-2 mb-2'>
             <Carousel >
-                <Carousel.Item>
-                    <img 
-                        className="d-block w-100 h-50"
-                        src="https://cdn.pixabay.com/photo/2022/02/08/09/03/window-7001026_960_720.jpg"
-                        alt="window" />
-                    <Carousel.Caption>
-                            <h1>Service</h1>
-                            <p>A lot of services</p>
-                    </Carousel.Caption>
-                    </Carousel.Item>
                     <Carousel.Item>
                         <img 
                             className="d-block w-100 h-50"
-                            src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_960_720.jpg"
+                            src={require('../assets/img/installation.jpg')}
                             alt="sunset" />
+                        <Carousel.Caption >
+                            <h1>Gèrer les installations</h1>
+                            <p>Installation Hydraulique Interne des cuisines et verifications des evacuations.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100 h-50" 
+                            src={require('../assets/img/maintenance2.jpg')}
+                            alt="sea" />
                         <Carousel.Caption>
-                            <h1>Service3</h1>
+                            <h1>Service Maintenance</h1>
+                            <p>Maintenance des chambres froides, frigo, congelateurs.</p>
+                            <p>Maintenance des foyers a gaz.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100 h-50" 
+                            src={require('../assets/img/achats3.jpg')}
+                            
+                            alt="achats" />
+                        <Carousel.Caption >
+                            <h1>Service D'Achats</h1>
+                            <p>Achats des table de travail, chariots, des marmites chauffantes electriques.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100 h-50" 
+                            src="https://cdn.pixabay.com/photo/2019/09/04/11/49/men-4451375_960_720.png"
+                            alt="sea" />
+                        <Carousel.Caption>
+                            <h1>Service D'Administration</h1>
                             <p>A lot of services</p>
                         </Carousel.Caption>
                     </Carousel.Item>
+
                     <Carousel.Item>
                         <img
                             className="d-block w-100 h-50" 
                             src="https://cdn.pixabay.com/photo/2013/07/18/20/26/sea-164989_960_720.jpg"
                             alt="sea" />
                         <Carousel.Caption>
-                            <h1>Service2</h1>
+                            <h1>Service D'Interventions</h1>
                             <p>A lot of services</p>
                         </Carousel.Caption>
                     </Carousel.Item>
+
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100 h-50" 
+                            src={require('../assets/img/mission.jpeg')}
+                            alt="sea" />
+                        <Carousel.Caption>
+                            <h1>Mission</h1>
+                            <p>Entretien generale de chambre froid.</p>
+                            <p>- Verifications des installations a gaz et maintenance des foyers.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+
+                <Carousel.Item>
+                    <img 
+                        className="d-block w-100 h-50"
+                        src={require('../assets/img/home_page.jpeg')}
+                        alt="window" />
+                    <Carousel.Caption>
+                            <h1>Personnel</h1>
+                            <p>A lot of services</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+
             </Carousel>
             
             <Row className="mt-4 mb-4">
@@ -49,8 +99,8 @@ export default function Main(){
                     <Card className="text-center">
                         <Card.Header className="bg-image hover-overlay ripple">
                             <img 
-                                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
-                                alt="nature"
+                                src={require('../assets/img/maintenance.jpeg')}
+                                alt="maintenance"
                                 className="img-fluid"
                             />
                             <div 
@@ -69,7 +119,7 @@ export default function Main(){
                 <Card className="text-center">
                         <Card.Header className="bg-image hover-overlay ripple">
                             <img 
-                                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+                                src={require('../assets/img/achats.jpeg')}
                                 alt="nature"
                                 className="img-fluid"
                             />

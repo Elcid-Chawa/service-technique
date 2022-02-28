@@ -21,7 +21,7 @@ function Dashboard (props) {
                             <td>{props.products[id].name}</td>
                             <td>{props.products[id].qty}</td>
                             <td>{props.products[id].createDate}</td>
-                            {props.authedUser === 'admin' && <td><button>Edit</button> <button>Delete</button></td>}
+                            {props.authedUser === 'root' && <td><button>Edit</button> <button>Delete</button></td>}
                         </tr>
                     )
                 )

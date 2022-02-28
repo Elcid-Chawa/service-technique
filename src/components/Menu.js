@@ -17,7 +17,15 @@ class Menu extends Component {
         return(
             <Navbar bg="dark" variant="dark">
                 <Container >
-                    <Navbar.Brand>Logo</Navbar.Brand>
+                    <Navbar.Brand>
+                        <img
+                            alt=""
+                            src={require('../assets/img/logo_bir.png')}
+                            width="100"
+                            height="50"
+                            className="d-inline-block align-top"
+                            />{' '}
+                    </Navbar.Brand>
                     <Nav className="justify-content-center" activeKey="/dashboard">
                         <Nav.Item style={{color: "white"}}>
                             <Nav.Link className="text-white" to="/"  as={NavLink}>Accueil</Nav.Link>

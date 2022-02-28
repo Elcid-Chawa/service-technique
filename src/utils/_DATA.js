@@ -29,8 +29,76 @@ let products = {
 let base = {
     mowb: {
         id: "mowb",
-        services: []
+        services: [
+            {
+                service_type: "liverason",
+                service_name: "BORDEREAU DE LIVRAISON",
+                service_title: "BASE DE MAN O WAR BAY",
+                service_subtitle: "DONATIONS DE 900 REPAS FROID POUR LA CAN A BAFOUSSAM",
+                service_headinds: ["QUANTITEES", "DESIGNATION", "OBSERVATION"],
+                service_items: [
+                    {
+                    QUANTITEES: ["108", "36", "4.5", "09"],
+                    DESIGNATION: [  "CARTONS DE 50 PICES", 
+                                    "CARTONS DE JUS TAM TAM DE 25PC", 
+                                    "CARTONS DE MAMBO DE 200 PC", 
+                                    "CARTONS DE BISCUIT DE 100 PC" ],
+                    OBSERVATION: ["900", "900", "900", "900" ],
+
+                    },
+                ],
+                service_copies: ["COM 6EME BIR", "C B A NDAM", "CUSINE BIR", "ARCHIVES"],
+                service_creator: "Mr. AMOGA JEHU"
+            }, 
+        ]
+    },
+    kribi: {
+        id: "kribi",
+        services: [
+            {
+            service_id: "",
+            status: "pending",
+            mission: ""
+        },
+    ]
+    },
+
+    bakassi: {
+        id: "bakassi",
+        services: [
+            {
+                service_type: "maintenance_cusine",
+                service_name: "SERVICE TECHNIQUE DES CUISINES BIR",
+                service_title: "PROGRAMME DES MISSIONS DE MAINTENANCE CUISINES BIR SEPTEMBRE 2021.",
+                service_subtitle: "BASES BAKASSI ( RIO +AKWA+DJABANE+ISSOBO+KUMBO A BEDIMO)",
+                service_headinds: ["TECHNICIENS", "PREIOD", "OBJECTIF"],
+                service_items: [
+                    {
+                        TECHNICIENS: ["DENIS ETONGOUE ( frigoriste )", "ABOUGNE JEAN LUC (plombier)"],
+                        PREIOD: [ "CARTONS DE 50 PICES", 
+                                    "CARTONS DE JUS TAM TAM DE 25PC", 
+                                    "CARTONS DE MAMBO DE 200 PC", 
+                                    "CARTONS DE BISCUIT DE 100 PC" ],
+                        OBJECTIFS: "Résolution de tous les problèmes Résolution de tous les problèmes",
+
+                    },
+                ],
+                service_creator: "Mr. AMOGA JEHU"
+            },
+        ],
+    },
+
+    basenaval_manoka: {
+        id: "basenaval_manoka",
     }
+
+}
+
+let status = {
+    pending: "encours",
+    complete: "complet",
+    hold: "arrete",
+    active: "active"
 }
 
 let service = {
