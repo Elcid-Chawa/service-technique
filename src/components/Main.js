@@ -119,7 +119,7 @@ export default function Main(){
                 <Card className="text-center">
                         <Card.Header className="bg-image hover-overlay ripple">
                             <img 
-                                src={require('../assets/img/achats.jpeg')}
+                                src={require('../assets/img/achats4.jpeg')}
                                 alt="nature"
                                 className="img-fluid"
                             />
