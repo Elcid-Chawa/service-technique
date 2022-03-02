@@ -31,7 +31,13 @@ class Menu extends Component {
                             <Nav.Link className="text-white" to="/"  as={NavLink}>Accueil</Nav.Link>
                         </Nav.Item>
                         <Nav.Item style={{color: "white"}}>
-                            <Nav.Link to="/" className="text-white" to="/contact"  as={NavLink}>Contact</Nav.Link>
+                            <Nav.Link className="text-white" href="/#service" >Nos Services</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item style={{color: "white"}}>
+                            <Nav.Link className="text-white" href="/#project" >Nos Projets</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item style={{color: "white"}}>
+                            <Nav.Link className="text-white" to="/contact"  as={NavLink}>Contact</Nav.Link>
                         </Nav.Item>
                         <Nav.Item style={{color: "white"}}>
                             <Nav.Link className="text-white" eventKey="link-1"  as={NavLink} to="/dashboard">Dashboard</Nav.Link>
