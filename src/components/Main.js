@@ -9,35 +9,21 @@ import {
 export default function Main(){
     return(
         <>
-            <Row>
-                <Container fluid
-                    className="mt5"
-                    style={{
-                        display: 'flex',
-                        flexDirection: "row",
-                        justifyContent: "center",
-                        alignItems: 'center',
-                        
-                    }}
-                >
-                    <h3>DEFINITION</h3>
-                             
-                </Container>
+            <Container className="d-flex justify-content-center flex-column  mb-3">
+                <Container className=" mt-10 d-flex justify-content-center">
+                        <h1 id="service">DEFINITION</h1>
+                    </Container>
                 <Container 
-                    className="mt5 d-flex justify-center aling-items-center"
-                    style={{
-                        width: '50%',
-                        height: '100%'
-                    }}
+                    className="mt-2 d-flex justify-center aling-items-center"
                 >
                     <p style={{textAlign: 'center'}}>Le <b>SERVICE TECHNIQUE</b>réalise et assure l'assistance et le support <b>technique</b> auprès des bases nationales du BIR en vue de prévenir et de résoudre des problèmes <b>techniques</b> d'exploitation et d'entretien par le traitement de questions et l'apport de solutions <b>techniques</b> selon des impératifs de qualité et de délais.</p>
       
                 </Container >
 
-            </Row>
+            </Container>
             
             
-            <Row >
+            <Container className="d-flex justify-content-center flex-column  mb-3">
                     <Container className="mt5 d-flex justify-center aling-items-center"
                         className="mt5 mb-5"
                         style={{
@@ -47,32 +33,37 @@ export default function Main(){
                             alignItems: 'center',                           
                         }}
                     >
-                        <h3>OBJECTIFS</h3>
+                        <h1>OBJECTIFS</h1>
                     </Container>
-                    <Col className="px-5">
-                        <img src={require('../assets/img/maintenance2.jpg')} />
-                    </Col>
-                    <Col>
+                    <Row className="align-items-center">
+                        <Col >
                         <Row className="align-items-center">
                             <Col className="col-2"><img src={require('../assets/img/sutainable-process.png')} /></Col>
-                            <Col className="col-5">Il conçoit, met en œuvre, contrôle et évalue les plans d'actions qui concourent à sa réalisation.</Col>
+                            <Col className="col-8">Il conçoit, met en œuvre, contrôle et évalue les plans d'actions qui concourent à sa réalisation.</Col>
                         </Row>
                         <Row className="align-items-center">
                             <Col className="col-2"><img src={require('../assets/img/sutainable-process.png')} /></Col>
-                            <Col className="col-5">Un diagnostic et une résolution rapide des pannes,</Col>
+                            <Col className="col-8">Un diagnostic et une résolution rapide des pannes,</Col>
                         </Row>
                         <Row className="align-items-center">
                             <Col className="col-2"><img src={require('../assets/img/sutainable-process.png')} /></Col>
-                            <Col className="col-5">Une gestion efficace du savoir de l’équipe support,</Col>
+                            <Col className="col-8">Une gestion efficace du savoir de l’équipe support,</Col>
                         </Row>
                         <Row className="align-items-center">
                             <Col className="col-2"><img src={require('../assets/img/sutainable-process.png')} /></Col>
-                            <Col className="col-5">Une orientation des usages des utilisateurs</Col>
+                            <Col className="col-8">Une orientation des usages des utilisateurs</Col>
                         </Row>
                         
-                    </Col>
-                    
-            </Row>
+                        </Col>
+                        <Col >
+                            <img 
+                                src={require('../assets/img/maintenance2.jpg')}
+                                width="50%"
+                                fluid 
+                            />
+                        </Col>
+                    </Row> 
+            </Container>
             
             <Container className="d-flex justify-content-center flex-column mb-3">
                     <Container className="d-flex justify-content-center">
@@ -83,7 +74,7 @@ export default function Main(){
                                 <Card>
                                     <img src={require('../assets/img/maintenance4.png')} className="card-img-top" alt="..." />
                                     <Card.Title>MAINTENANCES</Card.Title>
-                                    <Card.Body>Some note</Card.Body>
+                                    <Card.Body></Card.Body>
                                 </Card>
                                 
                             </Col>
@@ -91,21 +82,21 @@ export default function Main(){
                                 <Card>
                                     <img src={require('../assets/img/installation2.jpg')} className="card-img-top" alt="..." />
                                     <Card.Title>INSTALLATIONS</Card.Title>
-                                    <Card.Body>Some note</Card.Body>
+                                    <Card.Body></Card.Body>
                                 </Card>
                             </Col>
                             <Col className="m-3 text-center">
                                 <Card>
                                     <img src={require('../assets/img/intervension.jpg')} className="card-img-top" alt="..." />
                                     <Card.Title>INTERVENTIONS</Card.Title>
-                                    <Card.Body>Some note</Card.Body>
+                                    <Card.Body></Card.Body>
                                 </Card>
                             </Col>
                             <Col className="m-3 text-center">
                                 <Card>
                                     <img src={require('../assets/img/mission.png')} className="card-img-top" alt="..." />
                                     <Card.Title>MISSION</Card.Title>
-                                    <Card.Body>Some note</Card.Body>
+                                    <Card.Body></Card.Body>
                                 </Card>
                             </Col>
                         </Row>
@@ -114,28 +105,28 @@ export default function Main(){
                                 <Card>
                                     <img src={require('../assets/img/images.png')} className="card-img-top" alt="..." />
                                     <Card.Title>ADMINISTRATION</Card.Title>
-                                    <Card.Body>Some note</Card.Body>
+                                    <Card.Body></Card.Body>
                                 </Card>
                             </Col>
                             <Col className="m-3 text-center">
                                 <Card>
                                     <img src={require('../assets/img/personnel.jpg')} className="card-img-top" alt="..." />
                                     <Card.Title>PERSONNELS</Card.Title>
-                                    <Card.Body>Some note</Card.Body>
+                                    <Card.Body></Card.Body>
                                 </Card>
                             </Col>
                             <Col className="m-3 text-center">
                                 <Card>
                                     <img src={require('../assets/img/cart.png')} className="card-img-top" alt="..." />
                                     <Card.Title>ACHATS</Card.Title>
-                                    <Card.Body>Some note</Card.Body>
+                                    <Card.Body></Card.Body>
                                 </Card>
                             </Col>
                             <Col className="m-3 text-center">
                                 <Card>
                                     <img src={require('../assets/img/devis.png')} className="card-img-top" alt="..." />
                                     <Card.Title>DEVIS</Card.Title>
-                                    <Card.Body>Some note</Card.Body>
+                                    <Card.Body></Card.Body>
                                 </Card>
                             </Col>
                         </Row>
