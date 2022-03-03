@@ -1,26 +1,23 @@
 import React from 'react';
-import { Table } from 'react-bootstrap';
+import { Container, Row, Table } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { Navigate, useLocation } from 'react-router-dom';
+import services from './AllDocs';
 
 
 function Dashboard (props) {
     const location = useLocation();
 
-    if(props.authedUser === null || undefined){
-        
-        return <Navigate to="/login" state={{from: location}} replace />
-    }
-
-     function mapProducts() {
+    function mapProducts() {
         
         return(
-               props.allProducts.map((id) => (
-                        <tr key={id}>
-                            <td>{props.products[id].id}</td>
-                            <td>{props.products[id].name}</td>
-                            <td>{props.products[id].qty}</td>
-                            <td>{props.products[id].createDate}</td>
+               services.map((service, idx) => (
+                        <tr key={idx}>
+                            <td>{idx}</td>
+                            <td>{service.type}</td>
+                            <td>{service.title}</td>
+                            <td>{service.date}</td>
+                            <td>{service.fileName}</td>
                             {props.authedUser === 'root' && <td><button>Edit</button> <button>Delete</button></td>}
                         </tr>
                     )
@@ -29,24 +26,35 @@ function Dashboard (props) {
     }
 
     return (
-        <div >
-            <h1>Product Dashboard:</h1>
+        <Row className="d-flex justify-content-center flex-column mb-3 mt-5">
+            <Container 
+                className="d-flex justify-content-center align-items-center"
+                style={{ 
+                    height: "200px", 
+                    backgroundColor: "beige",
+                    backgroundAttachment: "fixed"
+                }}
+            >
+                <h1>TABLEAU DE BORD DU SERVICE</h1>
+            </Container>
             
-                <Table className='stripped bordered hover'>
+            
+                <Table responsive className='striped bordered hover'>
                     <thead>
                         <tr>
-                            <th>Code: </th>
-                            <th>Name:</th>
-                            <th>Quantity: </th>
-                            <th>Create Date:</th>
-                            {props.authedUser === 'admin' && <th>Modify</th>}
+                            <th>#: </th>
+                            <th>SERVICE: </th>
+                            <th>TITRE:</th>
+                            <th>DATE: </th>
+                            <th>Nom du Fiche</th>
+                            {props.authedUser === 'root' && <th>Modify</th>}
                         </tr>
                     </thead>
                     <tbody>
                         { mapProducts()}
                     </tbody>
                 </Table>
-            </div>
+            </Row>
                 
     )
 }

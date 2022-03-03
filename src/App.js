@@ -13,6 +13,8 @@ import Main from './components/Main';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
+import PDFDocs from './components/Documents';
+import AllDocs from './components/AllDocs';
 
 class App extends Component {
   componentDidMount(){
@@ -34,6 +36,7 @@ class App extends Component {
               <Route path ='/add' exact element={<NewProduct />} />
               <Route exact path='/login' element={<Login />} />
               <Route exact path='/contact' element={<Contact />} />
+              <Route path ='/docs' element={<AllDocs />} />
             </Routes>
             <Footer />
             </> 
