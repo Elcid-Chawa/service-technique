@@ -13,9 +13,9 @@ export default function Header(){
                 backgroundAttachment: "fixed",
                 height: "500px"
             }}>                
-                    
+                <Container className="d-flex justify-content-center aling-items-center py-51"><h1 className="text-black" >SERVICE TECHNIQUE</h1></Container>    
             </Container>
-            <Container className="justify-content-center aling-items-center"><h1 className="text-black py-" >SERVICE TECHNIQUE</h1></Container>
+            
         </Row>
         
         
