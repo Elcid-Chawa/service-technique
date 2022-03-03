@@ -134,8 +134,14 @@ export default function Main(){
                     
             </Container>
             
-            <Container className="d-flex justify-content-center flex-column mb-3">
-                <Container className="d-flex justify-content-center">
+            <Row className="d-flex justify-content-center flex-column mb-3">
+                <Container className="d-flex justify-content-center align-items-center"
+                    style={{ 
+                        height: "200px", 
+                        backgroundColor: "beige",
+                        backgroundAttachment: "fixed"
+                    }}
+                >
                     <h1 id="project">Nos Projets</h1>
                 </Container>
                 
@@ -162,7 +168,7 @@ export default function Main(){
                     </Row>     
                     
                 </Row>
-            </Container>
+            </Row>
             <Row>
                 <Container 
                     className="justify-content-center mb-3"
