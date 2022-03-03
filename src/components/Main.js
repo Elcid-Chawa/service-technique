@@ -16,7 +16,7 @@ export default function Main(){
                 <Container 
                     className="mt-2 d-flex justify-center aling-items-center"
                 >
-                    <p style={{textAlign: 'center'}}>Le <b>SERVICE TECHNIQUE</b>réalise et assure l'assistance et le support <b>technique</b> auprès des bases nationales du BIR en vue de prévenir et de résoudre des problèmes <b>techniques</b> d'exploitation et d'entretien par le traitement de questions et l'apport de solutions <b>techniques</b> selon des impératifs de qualité et de délais.</p>
+                    <p style={{textAlign: 'center'}}>Le <b>SERVICE TECHNIQUE</b> réalise et assure l'assistance et le support <b>technique</b> auprès des bases nationales du BIR en vue de prévenir et de résoudre des problèmes <b>techniques</b> d'exploitation et d'entretien par le traitement de questions et l'apport de solutions <b>techniques</b> selon des impératifs de qualité et de délais.</p>
       
                 </Container >
 
@@ -148,7 +148,7 @@ export default function Main(){
                         <h1>ADMINISTRATION</h1>
                 </Container>
                 <Row className="align-items-center">
-                    <Col>REsponsable</Col>
+                    <Col>Responsable</Col>
                     <Col>Responsable Adjoint</Col>
                 </Row>
             </Container>
