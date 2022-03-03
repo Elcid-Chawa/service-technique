@@ -10,9 +10,10 @@ import {
 export default function Main(){
     return(
         <>
-            <Container className="d-flex justify-content-center flex-column  mb-3">
-                <Container className=" mt-5 d-flex justify-content-center">
+            <Container className="flex justify-content-center flex-column  mb-3">
+                <Container className=" mt-5 justify-content-center flex-column">
                         <h1 id="service">DEFINITION</h1>
+                        <span>________</span>
                     </Container>
                 <Container 
                     className="mt-2 d-flex justify-center aling-items-center"
@@ -29,39 +30,50 @@ export default function Main(){
                         className="mt5 mb-5"
                         style={{
                             display: 'flex',
-                            flexDirection: "row",
+                            flexDirection: "column",
                             justifyContent: "center",
-                            alignItems: 'center',                           
+                            alignItems: 'center', 
+                            paddingTop: "10px",
                         }}
                     >
                         <h1>OBJECTIFS</h1>
+                        <span>________</span>
                     </Container>
+                    
                     <Row className="justify-content-center align-items-center">
-                        <Col >
-                        <Row className="align-items-center">
-                            <Col className="col-2"><img src={require('../assets/img/sutainable-process.png')} /></Col>
-                            <Col className="col-8">Il conçoit, met en œuvre, contrôle et évalue les plans d'actions qui concourent à sa réalisation.</Col>
-                        </Row>
-                        <Row className="align-items-center">
-                            <Col className="col-2"><img src={require('../assets/img/sutainable-process.png')} /></Col>
-                            <Col className="col-8">Un diagnostic et une résolution rapide des pannes,</Col>
-                        </Row>
-                        <Row className="align-items-center">
-                            <Col className="col-2"><img src={require('../assets/img/sutainable-process.png')} /></Col>
-                            <Col className="col-8">Une gestion efficace du savoir de l’équipe support,</Col>
-                        </Row>
-                        <Row className="align-items-center">
-                            <Col className="col-2"><img src={require('../assets/img/sutainable-process.png')} /></Col>
-                            <Col className="col-8">Une orientation des usages des utilisateurs</Col>
-                        </Row>
-                        
-                        </Col>
-                        <Col >
+                        <Col className="justify-content-end" >
                             <img 
                                 src={require('../assets/img/maintenance2.jpg')}
-                                width="50%"
+                                width="70%"
                                 fluid 
                             />
+                        </Col>
+                        <Col >
+                        <Row className="align-items-center">
+                            <Col >
+                               <p><img src={require('../assets/img/sutainable-process.png')} fluid />
+                               <span>Il conçoit, met en œuvre, contrôle et évalue les plans d'actions qui concourent à sa réalisation.</span></p>
+                            </Col>
+                        </Row>
+                        <Row className="align-items-center">
+                            <Col >
+                                <img src={require('../assets/img/sutainable-process.png')} fluid />
+                                <span>Un diagnostic et une résolution rapide des pannes,</span>
+                            </Col>
+                        </Row>
+                        <Row className="align-items-center">
+                            <Col >
+                                <img src={require('../assets/img/sutainable-process.png')} fluid />
+                                <span>Une gestion efficace du savoir de l’équipe support,</span>
+                            </Col>
+                        </Row>
+                        <Row className="align-items-center">
+                            <Col >
+                                <img src={require('../assets/img/sutainable-process.png')} fluid />
+                                <span>Une orientation des usages des utilisateurs</span>
+                            </Col>
+                        </Row>
+                        
                         </Col>
                     </Row> 
             </Container>
@@ -178,7 +190,12 @@ export default function Main(){
                     }} 
                 
                 >
-                    <Container className="d-flex justify-content-center">
+                    <Container 
+                        className="d-flex justify-content-center"
+                        style={{
+                            paddingTop: "10px"
+                        }}
+                    >
                             <h1 className="text-white">ADMINISTRATION</h1>
                     </Container>
                     <Row className="justify-content-center align-items-center"
