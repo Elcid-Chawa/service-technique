@@ -4,13 +4,14 @@ import {
     Row, 
     Col, 
     Card,
+    Image
     } from "react-bootstrap";
 
 export default function Main(){
     return(
         <>
             <Container className="d-flex justify-content-center flex-column  mb-3">
-                <Container className=" mt-10 d-flex justify-content-center">
+                <Container className=" mt-5 d-flex justify-content-center">
                         <h1 id="service">DEFINITION</h1>
                     </Container>
                 <Container 
@@ -35,7 +36,7 @@ export default function Main(){
                     >
                         <h1>OBJECTIFS</h1>
                     </Container>
-                    <Row className="align-items-center">
+                    <Row className="justify-content-center align-items-center">
                         <Col >
                         <Row className="align-items-center">
                             <Col className="col-2"><img src={require('../assets/img/sutainable-process.png')} /></Col>
@@ -142,16 +143,51 @@ export default function Main(){
                     <Col>Projects</Col>
                 </Row>
             </Container>
-
-            <Container className="d-flex justify-content-center flex-column mb-3">
-                <Container className="d-flex justify-content-center">
-                        <h1>ADMINISTRATION</h1>
-                </Container>
-                <Row className="align-items-center">
-                    <Col>Responsable</Col>
-                    <Col>Responsable Adjoint</Col>
-                </Row>
-            </Container>
+            <Row>
+                <Container 
+                    className="justify-content-center mb-3"
+                    style={{
+                        backgroundColor: "darkgrey",
+                        height:"500px"
+                    }} 
+                
+                >
+                    <Container className="d-flex justify-content-center">
+                            <h1 className="text-white">ADMINISTRATION</h1>
+                    </Container>
+                    <Row className="justify-content-center align-items-center"
+                        style={{height:"500px"}}
+                    >
+                        <Col xs={4} className="m-3 text-center">
+                            <Card 
+                                className="align-items-center text-white" 
+                                style={{backgroundColor:"darkgrey",  width:'18rem'}} >
+                                <Image src={require('../assets/img/images.png')}
+                                    roundedCircle 
+                                    style={{borderBottom: "3px solid red", height: "50%", width:"50%"}}
+                                    alt="..." />
+                                <Card.Title className="py-3">M. BERNADO CLEMEMET</Card.Title>
+                                <Card.Body>Responsable Service Technique du BIR</Card.Body>
+                            </Card>
+                        </Col>
+                        <Col xs={4} className="m-3 text-center">
+                            <Card 
+                                className="align-items-center text-white" 
+                                style={{backgroundColor:"darkgrey", width:'18rem'}}>
+                                <Image src={require('../assets/img/images.png')} 
+                                    variant="top"
+                                    className="rounded d-block"
+                                    roundedCircle
+                                    style={{borderBottom: "3px solid red", height: "50%", width:"50%"}}
+                                    alt="..." />
+                                <Card.Title className="py-3">M. AMOGA JEHU</Card.Title>
+                                <Card.Body>Responsable Adjoint Service Technique du BIR</Card.Body>
+                            </Card>
+                        </Col>
+                    </Row>
+                </Container> 
+            </Row>
+            
             
         </>
     )
