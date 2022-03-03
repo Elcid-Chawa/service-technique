@@ -139,8 +139,28 @@ export default function Main(){
                     <h1 id="project">Nos Projets</h1>
                 </Container>
                 
-                  <Row>   
-                    <Col>Projects</Col>
+                  <Row>
+                      <Row>
+                        <Col className="col-6"
+                        >
+                            <Image src={require('../assets/img/mission.jpeg')} fluid />
+                        </Col>
+                        <Col className="col-3">
+                            <Image src={require('../assets/img/cable.jpeg')} fluid />
+                        </Col>
+                        <Col className="col-3">
+                            <Image src={require('../assets/img/gas_bottle.jpeg')} fluid />
+                        </Col> 
+                    </Row>
+                    <Row>
+                        <Col className="col-6">
+                            <Image src={require('../assets/img/maintenance2.jpg')} fluid />
+                        </Col>
+                        <Col className="col-6">
+                            <Image src={require('../assets/img/home_page.jpeg')} fluid />
+                        </Col>
+                    </Row>     
+                    
                 </Row>
             </Container>
             <Row>
