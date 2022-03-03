@@ -10,8 +10,17 @@ import {
 export default function Main(){
     return(
         <>
-            <Container className="flex justify-content-center flex-column  mb-3">
-                <Container className=" mt-5 justify-content-center flex-column">
+            <Container className="d-flex justify-content-center flex-column  mb-3 mt-5">
+                <Container 
+                    className="mt5 mb-5"
+                    style={{
+                        display: 'flex',
+                        flexDirection: "column",
+                        justifyContent: "center",
+                        alignItems: 'center', 
+                        paddingTop: "10px",
+                    }}
+                >
                         <h1 id="service">DEFINITION</h1>
                         <span>________</span>
                     </Container>
@@ -25,8 +34,8 @@ export default function Main(){
             </Container>
             
             
-            <Container className="d-flex justify-content-center flex-column  mb-3">
-                    <Container className="mt5 d-flex justify-center aling-items-center"
+            <Container className="d-flex justify-content-center flex-column  mb-3 mt-5">
+                    <Container 
                         className="mt5 mb-5"
                         style={{
                             display: 'flex',
@@ -50,26 +59,26 @@ export default function Main(){
                         </Col>
                         <Col >
                         <Row className="align-items-center">
-                            <Col >
-                               <p><img src={require('../assets/img/sutainable-process.png')} fluid />
-                               <span>Il conçoit, met en œuvre, contrôle et évalue les plans d'actions qui concourent à sa réalisation.</span></p>
+                            <Col className="align-items-center">
+                               <div style={{float:"left"}}><img src={require('../assets/img/sutainable-process.png')} fluid /></div>
+                               <div>Il conçoit, met en œuvre, contrôle et évalue les plans d'actions qui concourent à sa réalisation.</div>
                             </Col>
                         </Row>
                         <Row className="align-items-center">
                             <Col >
-                                <img src={require('../assets/img/sutainable-process.png')} fluid />
+                                <div style={{float: "left"}}><img src={require('../assets/img/sutainable-process.png')} fluid /></div>
                                 <span>Un diagnostic et une résolution rapide des pannes,</span>
                             </Col>
                         </Row>
                         <Row className="align-items-center">
                             <Col >
-                                <img src={require('../assets/img/sutainable-process.png')} fluid />
+                            <div style={{float: "left"}}><img src={require('../assets/img/sutainable-process.png')} fluid /></div>
                                 <span>Une gestion efficace du savoir de l’équipe support,</span>
                             </Col>
                         </Row>
                         <Row className="align-items-center">
                             <Col >
-                                <img src={require('../assets/img/sutainable-process.png')} fluid />
+                            <div style={{float: "left"}}><img src={require('../assets/img/sutainable-process.png')} fluid /></div>
                                 <span>Une orientation des usages des utilisateurs</span>
                             </Col>
                         </Row>
@@ -78,8 +87,15 @@ export default function Main(){
                     </Row> 
             </Container>
             
-            <Container className="d-flex justify-content-center flex-column mb-3">
-                    <Container className="d-flex justify-content-center">
+            <Row className="d-flex justify-content-center flex-column mb-3 mt-5">
+                    <Container 
+                        className="d-flex justify-content-center align-items-center"
+                        style={{ 
+                            height: "200px", 
+                            backgroundColor: "beige",
+                            backgroundAttachment: "fixed"
+                        }}
+                    >
                         <h1 id="service">Tous Les Services</h1>
                     </Container>
                         <Row>
@@ -144,9 +160,9 @@ export default function Main(){
                             </Col>
                         </Row>
                     
-            </Container>
+            </Row>
             
-            <Row className="d-flex justify-content-center flex-column mb-3">
+            <Row className="d-flex justify-content-center flex-column mb-3 mt-5">
                 <Container className="d-flex justify-content-center align-items-center"
                     style={{ 
                         height: "200px", 
@@ -181,26 +197,29 @@ export default function Main(){
                     
                 </Row>
             </Row>
-            <Row>
-                <Container 
-                    className="justify-content-center mb-3"
-                    style={{
-                        backgroundColor: "darkgrey",
-                        height:"500px"
-                    }} 
+
+            <Row className="d-flex justify-content-center mb-3 mt-5 flex-column" 
+                style={{
+                    backgroundColor: "darkgrey",
+                    
+                }} 
                 
-                >
+            >
                     <Container 
-                        className="d-flex justify-content-center"
+                        className="d-flex justify-content-center aling-items-center flex-column mb-5"
                         style={{
-                            paddingTop: "10px"
+                            display: 'flex',
+                            flexDirection: "column",
+                            justifyContent: "center",
+                            alignItems: 'center', 
+                            paddingTop: "10px",
+                            color: "white"
                         }}
                     >
-                            <h1 className="text-white">ADMINISTRATION</h1>
+                            <h1>ADMINISTRATION</h1>
+                            <span>______</span>
                     </Container>
-                    <Row className="justify-content-center align-items-center"
-                        style={{height:"500px"}}
-                    >
+                    <Row className="justify-content-center align-items-center">
                         <Col xs={4} className="m-3 text-center">
                             <Card 
                                 className="align-items-center text-white" 
@@ -209,7 +228,7 @@ export default function Main(){
                                     roundedCircle 
                                     style={{borderBottom: "3px solid red", height: "50%", width:"50%"}}
                                     alt="..." />
-                                <Card.Title className="py-3">M. BERNADO CLEMEMET</Card.Title>
+                                <Card.Title >M. BERNADO CLEMEMET</Card.Title>
                                 <Card.Body>Responsable Service Technique du BIR</Card.Body>
                             </Card>
                         </Col>
@@ -223,12 +242,12 @@ export default function Main(){
                                     roundedCircle
                                     style={{borderBottom: "3px solid red", height: "50%", width:"50%"}}
                                     alt="..." />
-                                <Card.Title className="py-3">M. AMOGA JEHU</Card.Title>
+                                <Card.Title>M. AMOGA JEHU</Card.Title>
                                 <Card.Body>Responsable Adjoint Service Technique du BIR</Card.Body>
                             </Card>
                         </Col>
                     </Row>
-                </Container> 
+                
             </Row>
             
             
