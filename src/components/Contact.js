@@ -3,7 +3,7 @@ import { Row, Col, Container, Form, Button } from "react-bootstrap";
 
 export default function Contact(){
     return(
-        <>
+        
         <Container>
       <h2 className="h1-responsive font-weight-bold text-center my-5">
         Contactez Nous
@@ -76,6 +76,6 @@ export default function Contact(){
         </Col>
       </Row>
     </Container>
-        </>
+       
     );
 }
