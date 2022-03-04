@@ -177,13 +177,13 @@ export default function Main(){
                       <Row>
                         <Col className="col-6"
                         >
-                            <Image src={require('../assets/img/mission.jpeg')} fluid />
+                            <Image src={require('../assets/img/mission.jpg')} fluid />
                         </Col>
                         <Col className="col-3">
-                            <Image src={require('../assets/img/cable.jpeg')} fluid />
+                            <Image src={require('../assets/img/cable.jpg')} fluid />
                         </Col>
                         <Col className="col-3">
-                            <Image src={require('../assets/img/gas_bottle.jpeg')} fluid />
+                            <Image src={require('../assets/img/gas_bottle.jpg')} fluid />
                         </Col> 
                     </Row>
                     <Row>
@@ -191,7 +191,7 @@ export default function Main(){
                             <Image src={require('../assets/img/maintenance2.jpg')} fluid />
                         </Col>
                         <Col className="col-6">
-                            <Image src={require('../assets/img/home_page.jpeg')} fluid />
+                            <Image src={require('../assets/img/home_page.jpg')} fluid />
                         </Col>
                     </Row>     
                     
