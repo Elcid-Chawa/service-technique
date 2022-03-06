@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Row, Col, NavLink } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 export default function Footer(){
     return(
@@ -19,13 +20,13 @@ export default function Footer(){
                     <Col className="col-6 col-lg-2 mb-3 text-white">
                         <h5>Services</h5>
                         <ul className="list-unstyled text-muted">
-                            <li>Gèrer les installations</li>
-                            <li>Service Maintenance</li>
-                            <li>Service D'Achats</li>
-                            <li>Service D'Administration</li>
-                            <li>Service D'Interventions</li>
-                            <li>Mission</li>
-                            <li>Personnels</li>
+                            <li><NavLink to={'/dashboard/installations'}>Gèrer les installations</NavLink></li>
+                            <li><NavLink to={'/dashboard/maintenance'}>Service Maintenance</NavLink></li>
+                            <li><NavLink to={'/dashboard/achats'}>Service D'Achats</NavLink></li>
+                            <li><NavLink to={'/dashboard/admin'}>Service D'Administration</NavLink></li>
+                            <li><NavLink to={'/dashboard/intervension'}>Service D'Interventions</NavLink></li>
+                            <li><NavLink to={'/dashboard/mission'}>Mission</NavLink></li>
+                            <li><NavLink to={'/dashboard/personnel'}>Personnels</NavLink></li>
                         </ul>
                     </Col>
                     <Col className="col-6 col-lg-2 mb-3 text-white">

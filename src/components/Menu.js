@@ -39,9 +39,7 @@ class Menu extends Component {
                         <Nav.Item style={{color: "white"}}>
                             <Nav.Link className="text-white" to="/contact"  as={NavLink}>Contact</Nav.Link>
                         </Nav.Item>
-                        <Nav.Item style={{color: "white"}}>
-                            <Nav.Link className="text-white" eventKey="link-1"  as={NavLink} to="/dashboard">Dashboard</Nav.Link>
-                        </Nav.Item>
+                        
                         <Nav.Item>
                             {authedUser === 'root' && <Nav.Link className="text-white" eventKey="link-2"  as={NavLink} to="/add">Service</Nav.Link>}
                         </Nav.Item>

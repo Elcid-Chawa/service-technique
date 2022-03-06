@@ -35,7 +35,20 @@ const services = {
                 fileName: "doc4.pdf",
                 
             },
-
+            {
+                type:"SERVICE TECHNIQUE DES CUISINES BIR" ,
+                title: "ORDRE DE MISSION",
+                date: "",
+                fileName: "doc6.pdf",
+                
+            },
+            {
+                type:"SERVICE TECHNIQUE DES CUISINES BIR" ,
+                title: "PROGRAMME DES MISSIONS DE MAINTENANCE CUISINES BIR MARS 2022.",
+                date: "",
+                fileName: "doc7.pdf",
+                
+            },
 
         ]},
     
