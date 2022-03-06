@@ -6,6 +6,7 @@ import {
     Card,
     Image
     } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 export default function Main(){
     return(
@@ -54,31 +55,31 @@ export default function Main(){
                             <img 
                                 src={require('../assets/img/maintenance2.jpg')}
                                 width="70%"
-                                fluid 
+                                fluid='true' 
                             />
                         </Col>
                         <Col >
                         <Row className="align-items-center">
                             <Col className="align-items-center">
-                               <div style={{float:"left"}}><img src={require('../assets/img/sutainable-process.png')} fluid /></div>
+                               <div style={{float:"left"}}><img src={require('../assets/img/sutainable-process.png')} fluid='true' /></div>
                                <div>Il conçoit, met en œuvre, contrôle et évalue les plans d'actions qui concourent à sa réalisation.</div>
                             </Col>
                         </Row>
                         <Row className="align-items-center">
                             <Col >
-                                <div style={{float: "left"}}><img src={require('../assets/img/sutainable-process.png')} fluid /></div>
+                                <div style={{float: "left"}}><img src={require('../assets/img/sutainable-process.png')} fluid='true' /></div>
                                 <span>Un diagnostic et une résolution rapide des pannes,</span>
                             </Col>
                         </Row>
                         <Row className="align-items-center">
                             <Col >
-                            <div style={{float: "left"}}><img src={require('../assets/img/sutainable-process.png')} fluid /></div>
+                            <div style={{float: "left"}}><img src={require('../assets/img/sutainable-process.png')} fluid='true' /></div>
                                 <span>Une gestion efficace du savoir de l’équipe support,</span>
                             </Col>
                         </Row>
                         <Row className="align-items-center">
                             <Col >
-                            <div style={{float: "left"}}><img src={require('../assets/img/sutainable-process.png')} fluid /></div>
+                            <div style={{float: "left"}}><img src={require('../assets/img/sutainable-process.png')} fluid='true' /></div>
                                 <span>Une orientation des usages des utilisateurs</span>
                             </Col>
                         </Row>
@@ -100,63 +101,78 @@ export default function Main(){
                     </Container>
                         <Row>
                             <Col className="m-3 text-center">
+                            <NavLink to={`/dashboard/maintenance`} style={{textDecoration: 'none'}}>
                                 <Card>
                                     <img src={require('../assets/img/maintenance4.png')} className="card-img-top" alt="..." />
                                     <Card.Title>MAINTENANCES</Card.Title>
                                     <Card.Body></Card.Body>
                                 </Card>
+                            </NavLink>
                                 
                             </Col>
                             <Col className="m-3 text-center">
+                            <NavLink to={`/dashboard/installations`} style={{textDecoration: 'none'}}>
                                 <Card>
                                     <img src={require('../assets/img/installation2.jpg')} className="card-img-top" alt="..." />
                                     <Card.Title>INSTALLATIONS</Card.Title>
                                     <Card.Body></Card.Body>
                                 </Card>
+                                </NavLink>
                             </Col>
                             <Col className="m-3 text-center">
+                            <NavLink to={`/dashboard/intervension`} style={{textDecoration: 'none'}}>
                                 <Card>
                                     <img src={require('../assets/img/intervension.jpg')} className="card-img-top" alt="..." />
                                     <Card.Title>INTERVENTIONS</Card.Title>
                                     <Card.Body></Card.Body>
                                 </Card>
+                                </NavLink>
                             </Col>
                             <Col className="m-3 text-center">
+                            <NavLink to={`/dashboard/mission`} style={{textDecoration: 'none'}}>
                                 <Card>
                                     <img src={require('../assets/img/mission.png')} className="card-img-top" alt="..." />
                                     <Card.Title>MISSION</Card.Title>
                                     <Card.Body></Card.Body>
                                 </Card>
+                            </NavLink>
                             </Col>
                         </Row>
                         <Row>
                             <Col className="m-3 text-center">
+                                <NavLink to={`/dashboard/admin`} style={{textDecoration: 'none'}}>
                                 <Card>
                                     <img src={require('../assets/img/images.png')} className="card-img-top" alt="..." />
                                     <Card.Title>ADMINISTRATION</Card.Title>
                                     <Card.Body></Card.Body>
-                                </Card>
+                                </Card></NavLink>
                             </Col>
                             <Col className="m-3 text-center">
+                            <NavLink to={`/dashboard/personnel`} style={{textDecoration: 'none'}}>
                                 <Card>
                                     <img src={require('../assets/img/personnel.jpg')} className="card-img-top" alt="..." />
                                     <Card.Title>PERSONNELS</Card.Title>
                                     <Card.Body></Card.Body>
                                 </Card>
+                                </NavLink>
                             </Col>
                             <Col className="m-3 text-center">
+                            <NavLink to={`/dashboard/achats`} style={{textDecoration: 'none'}}>
                                 <Card>
                                     <img src={require('../assets/img/cart.png')} className="card-img-top" alt="..." />
                                     <Card.Title>ACHATS</Card.Title>
                                     <Card.Body></Card.Body>
                                 </Card>
+                                </NavLink>
                             </Col>
                             <Col className="m-3 text-center">
+                            <NavLink to={`/dashboard/devis`} style={{textDecoration: 'none'}}>
                                 <Card>
                                     <img src={require('../assets/img/devis.png')} className="card-img-top" alt="..." />
                                     <Card.Title>DEVIS</Card.Title>
                                     <Card.Body></Card.Body>
                                 </Card>
+                                </NavLink>
                             </Col>
                         </Row>
                     
@@ -177,21 +193,21 @@ export default function Main(){
                       <Row>
                         <Col className="col-6"
                         >
-                            <Image src={require('../assets/img/mission.jpg')} fluid />
+                            <Image src={require('../assets/img/mission.jpg')} fluid='true' />
                         </Col>
                         <Col className="col-3">
-                            <Image src={require('../assets/img/cable.jpg')} fluid />
+                            <Image src={require('../assets/img/cable.jpg')} fluid='true' />
                         </Col>
                         <Col className="col-3">
-                            <Image src={require('../assets/img/gas_bottle.jpg')} fluid />
+                            <Image src={require('../assets/img/gas_bottle.jpg')} fluid='true' />
                         </Col> 
                     </Row>
                     <Row>
                         <Col className="col-6">
-                            <Image src={require('../assets/img/maintenance2.jpg')} fluid />
+                            <Image src={require('../assets/img/maintenance2.jpg')} fluid='true' />
                         </Col>
                         <Col className="col-6">
-                            <Image src={require('../assets/img/home_page.jpg')} fluid />
+                            <Image src={require('../assets/img/home_page.jpg')} fluid='true' />
                         </Col>
                     </Row>     
                     

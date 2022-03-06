@@ -1,23 +1,39 @@
 import React from 'react';
 import { Container, Row, Table } from 'react-bootstrap';
 import { connect } from 'react-redux';
-import { Navigate, useLocation } from 'react-router-dom';
+import { Navigate, useLocation, NavLink, useParams } from 'react-router-dom';
 import services from './AllDocs';
 
 
 function Dashboard (props) {
     const location = useLocation();
+    const {service} = useParams();
 
-    function mapProducts() {
+    function mapProducts(services) {
+        
+
+        if(services === []){
+            return ( 
+                <tr>
+                    <td>No Data</td>
+                    <td>No Data</td>
+                    <td>No Data</td>
+                    <td>No Data</td>
+                </tr> 
+            );
+        }
+
+        console.log(service)
         
         return(
+
                services.map((service, idx) => (
                         <tr key={idx}>
                             <td>{idx}</td>
                             <td>{service.type}</td>
                             <td>{service.title}</td>
                             <td>{service.date}</td>
-                            <td>{service.fileName}</td>
+                            <td ><NavLink to={`/docs/${service.fileName}`}>{service.fileName}</NavLink></td>
                             {props.authedUser === 'root' && <td><button>Edit</button> <button>Delete</button></td>}
                         </tr>
                     )
@@ -39,21 +55,24 @@ function Dashboard (props) {
             </Container>
             
             
+            <h2>{services[service].type}</h2>
                 <Table responsive className='striped bordered hover'>
+                        
                     <thead>
                         <tr>
                             <th>#: </th>
-                            <th>SERVICE: </th>
-                            <th>TITRE:</th>
-                            <th>DATE: </th>
-                            <th>Nom du Fiche</th>
-                            {props.authedUser === 'root' && <th>Modify</th>}
-                        </tr>
+                                <th>SERVICE: </th>
+                                <th>TITRE:</th>
+                                <th>DATE: </th>
+                                <th>Nom du Fiche</th>
+                                {props.authedUser === 'root' && <th>Modify</th>}
+                            </tr>
                     </thead>
                     <tbody>
-                        { mapProducts()}
+                        {mapProducts(services[service].service)}
                     </tbody>
                 </Table>
+                    
             </Row>
                 
     )

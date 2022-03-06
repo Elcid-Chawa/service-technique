@@ -32,11 +32,11 @@ class App extends Component {
             <Header />           
             <Routes>
               <Route exact path ='/' element={<Main />} />
-              <Route exact path='/dashboard' element={<Dashboard {...this.props}/>} />
+              <Route exact path='/dashboard/:service' element={<Dashboard {...this.props}/>} />
               <Route path ='/add' exact element={<NewProduct />} />
               <Route exact path='/login' element={<Login />} />
               <Route exact path='/contact' element={<Contact />} />
-              <Route path ='/docs' element={<AllDocs />} />
+              <Route path ='/docs/:filename' element={<PDFDocs {...this.props} />} />
             </Routes>
             <Footer />
             </> 
