@@ -36,7 +36,7 @@ class App extends Component {
               <Route path ='/add' exact element={<NewProduct />} />
               <Route exact path='/login' element={<Login />} />
               <Route exact path='/contact' element={<Contact />} />
-              <Route path ='/docs/:filename' element={<PDFDocs {...this.props} />} />
+              <Route path ='/docs/:filepath/:filename' element={<PDFDocs {...this.props} />} />
             </Routes>
             <Footer />
             </> 

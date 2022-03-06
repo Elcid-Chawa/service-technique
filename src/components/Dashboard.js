@@ -33,7 +33,7 @@ function Dashboard (props) {
                             <td>{service.type}</td>
                             <td>{service.title}</td>
                             <td>{service.date}</td>
-                            <td ><NavLink to={`/docs/${service.fileName}`}>{service.fileName}</NavLink></td>
+                            <td ><NavLink to={`/docs/${service.filePath}`}>{service.filePath}</NavLink></td>
                             {props.authedUser === 'root' && <td><button>Edit</button> <button>Delete</button></td>}
                         </tr>
                     )
